@@ -2,7 +2,7 @@
 
 #include "TrainingGroundsGameMode.h"
 #include "TrainingGroundsHUD.h"
-#include "TrainingGroundsCharacter.h"
+#include "Player/FirstPersonCharacter.h"
 #include "UObject/ConstructorHelpers.h"
 
 ATrainingGroundsGameMode::ATrainingGroundsGameMode()
