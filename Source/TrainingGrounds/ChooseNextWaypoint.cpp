@@ -12,6 +12,12 @@ EBTNodeResult::Type UChooseNextWaypoint::ExecuteTask(UBehaviorTreeComponent& Own
 	// TODO protect against empty patrol routes
 	// TODO protect against no Patrol Route component
 
+	// Optional:
+	// Check if perception detection triggered
+	// Create temporary waypoint
+	// Go to the waypoint once, wait a bit (maybe look around?) and return to normal pattern
+
+
 	// Get the patrol points
 	auto ControlledPawn = OwnerComp.GetAIOwner()->GetPawn();
 	auto PatrolRoute = ControlledPawn->FindComponentByClass<UPatrolRoute>();
