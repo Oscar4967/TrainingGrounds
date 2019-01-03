@@ -89,6 +89,7 @@ void AFirstPersonCharacter::SetupPlayerInputComponent(class UInputComponent* Pla
 	// Bind movement events
 	PlayerInputComponent->BindAxis("MoveForward", this, &AFirstPersonCharacter::MoveForward);
 	PlayerInputComponent->BindAxis("MoveRight", this, &AFirstPersonCharacter::MoveRight);
+	//PlayerInputComponent->BindAxis("LeanLeft", this, &AFirstPersonCharacter::Lean)
 
 	// We have 2 versions of the rotation bindings to handle different kinds of devices differently
 	// "turn" handles devices that provide an absolute delta, such as a mouse.
@@ -194,6 +195,16 @@ void AFirstPersonCharacter::MoveRight(float Value)
 		// add movement in that direction
 		AddMovementInput(GetActorRightVector(), Value);
 	}
+}
+
+void AFirstPersonCharacter::LeanLeft()
+{
+
+}
+
+void AFirstPersonCharacter::LeanRight()
+{
+
 }
 
 void AFirstPersonCharacter::TurnAtRate(float Rate)
