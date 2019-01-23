@@ -170,18 +170,6 @@ void AFirstPersonCharacter::MoveRight(float Value)
 	}
 }
 
-/*
-void AFirstPersonCharacter::LeanLeft()
-{
-
-}
-
-void AFirstPersonCharacter::LeanRight()
-{
-
-}
-*/
-
 
 void AFirstPersonCharacter::TurnAtRate(float Rate)
 {
