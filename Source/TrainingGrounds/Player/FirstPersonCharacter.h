@@ -17,18 +17,6 @@ class AFirstPersonCharacter : public ACharacter
 	UPROPERTY(VisibleDefaultsOnly, Category=Mesh)
 	class USkeletalMeshComponent* Mesh1P;
 
-
-	//moved to Gun.h
-	///** Gun mesh: 1st person view (seen only by self) */
-	//UPROPERTY(VisibleDefaultsOnly, Category = Mesh)
-	//class USkeletalMeshComponent* FP_Gun;
-	/** Location on gun mesh where projectiles should spawn. */
-	//UPROPERTY(VisibleDefaultsOnly, Category = Mesh)
-	//class USceneComponent* FP_MuzzleLocation;
-
-
-
-
 	/** First person camera */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera, meta = (AllowPrivateAccess = "true"))
 	class UCameraComponent* FirstPersonCameraComponent;
@@ -56,22 +44,12 @@ public:
 	TSubclassOf<class AGun> GunBlueprint;
 
 protected:
-	//moved to Gun.h
-	///** Fires a projectile. */
-	//void OnFire();
-
+	
 	/** Handles moving forward/backward */
 	void MoveForward(float Val);
 
 	/** Handles stafing movement, left and right */
 	void MoveRight(float Val);
-
-	//TODO Sort out leaning mechanic
-	/** Handles leaning left and right, respectively */
-	//void LeanLeft();
-	//void LeanRight();
-
-	
 
 	/**
 	 * Called via input to turn at a given rate.
@@ -99,7 +77,5 @@ public:
 
 private:
 	AGun* Gun;
-
-
 };
 
